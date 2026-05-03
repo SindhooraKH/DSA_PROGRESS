@@ -22,13 +22,6 @@ def max_len(arr):
         return False
 
 
-    
-
-
-
-
-
-
 
 
 def main():
