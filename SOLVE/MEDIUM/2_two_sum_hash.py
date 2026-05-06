@@ -1,10 +1,15 @@
 def two_sum(arr,k):
+    n=len(arr)
+    hash_map=[]
     for i in range(len(arr)):
-        total=0
-        for j in range(len(arr)):
-            total=arr[i]+arr[j]
-            if total==k:
-                return (arr[i],arr[j])
+        total=k-arr[i]
+        if total in hash_map:
+            j=hash_map.index(total)
+            return (j, i)
+        hash_map.append(arr[i])
+    return (-1,-1)
+
+
 def main():
     arr=list(map(int,input("enter the array").split()))
     k=int(input("enter the number"))
